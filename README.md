@@ -2,7 +2,7 @@
 
 **Protect data in transit - End-to-end encrypted channel with AES-GCM and mutual authentication**
 
-> **Part 3 of 3** | [Part 2: Signing <-](https://github.com/nitikorn20/psoc-edge-optiga-02-signing) | [<- Back to Tutorial Hub](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials)
+> **Part 3 of 3** | [Part 2: Signing <-](https://github.com/nitikorn20/02-signing) | [<- Back to Tutorial Hub](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials)
 
 ---
 
@@ -63,15 +63,9 @@ This demo shows a complete **3-phase secure communication protocol**:
 
 See [Hardware Setup Guide](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials#prerequisites) in the Tutorial Hub for photos.
 
-### Build and Run
+### Build and Program (VS Code)
 
-```bash
-# Build all projects
-make -j8
-
-# Program device
-make program
-```
+See [docs/build.md](docs/build.md) for the standard VS Code workflow used by this project.
 
 ### Expected Output
 
@@ -482,11 +476,7 @@ BLOG3/
 - USB cable to KitProg3 port
 
 **Try:**
-```bash
-make clean_all
-make -j8
-make program
-```
+- Run **Clean**, then **Build**, then **Program** in ModusToolbox.
 
 </details>
 
@@ -525,8 +515,8 @@ make program
 **Workaround:**
 1. Temporarily comment this line in `common.mk`:
    `COMBINE_SIGN_JSON?=./bsps/TARGET_$(TARGET)/config/GeneratedSource/boot_with_bldr.json`
-2. Run `make -j8` to let the system generate `GeneratedSource`
-3. Uncomment the line, then run `make program`
+2. Run **Build** in ModusToolbox to let the system generate `GeneratedSource`
+3. Uncomment the line, then run **Program**
 
 </details>
 
@@ -610,8 +600,8 @@ This tutorial used **ephemeral keys** (for learning). For production deployments
 - [NIST AES-GCM Specification](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)
 
 ### Previous Parts
-- [Part 1: Device Attestation](https://github.com/nitikorn20/psoc-edge-optiga-01-attestation)
-- [Part 2: Digital Signatures](https://github.com/nitikorn20/psoc-edge-optiga-02-signing)
+- [Part 1: Device Attestation](https://github.com/nitikorn20/01-attestation)
+- [Part 2: Digital Signatures](https://github.com/nitikorn20/02-signing)
 
 ---
 
@@ -635,7 +625,7 @@ Apache License 2.0
 
 Found issues or have suggestions?
 - [Report Issues](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials/issues)
-- [Tutorial Series](../optiga-tfm-connectivity-tutorials/)
+- [Tutorial Series](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials)
 
 ---
 
@@ -643,6 +633,6 @@ Found issues or have suggestions?
 
 **🔐 End-to-end secure IoT communication with hardware root of trust**
 
-[Part 2: Signing <-](https://github.com/nitikorn20/psoc-edge-optiga-02-signing) | [Tutorial Hub ->](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials)
+[Part 2: Signing <-](https://github.com/nitikorn20/02-signing) | [Tutorial Hub ->](https://github.com/nitikorn20/optiga-tfm-connectivity-tutorials)
 
 </div>
